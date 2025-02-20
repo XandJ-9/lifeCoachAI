@@ -1,5 +1,6 @@
-const API_KEY = 'e791711e-bb62-4754-b7df-c933c03166f7';
-const API_URL = '/api/v3/chat/completions';
+const API_KEY = import.meta.env.VITE_API_KEY;
+const API_URL = import.meta.env.VITE_API_URL;
+const API_MODEL = import.meta.env.VITE_API_MODEL;
 
 export async function sendMessage(messages, onProgress) {
   try {
@@ -10,7 +11,7 @@ export async function sendMessage(messages, onProgress) {
         'Authorization': `Bearer ${API_KEY}`
       },
       body: JSON.stringify({
-        model: 'ep-20250218154514-hv8w4',
+        model: API_MODEL,
         messages: [
           { role: 'system', content: '你是一个专业的生活教练AI助手，你的目标是帮助用户解决生活中的各种问题，提供专业的建议和指导。' },
           ...messages
