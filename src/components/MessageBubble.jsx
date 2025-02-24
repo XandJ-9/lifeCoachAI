@@ -60,9 +60,9 @@ function MessageBubble({ message, expanded, onToggleReasoning }) {
                 gap: 1
               }}
             >
-              推演过程 {expanded ? '▶': '▼'}
+              推演过程 {expanded ? '▼' : '▶'}
             </Typography>
-            {!expanded && (
+            {expanded && (
               <Box sx={{ mt: 1 }}>
                 <Typography 
                   sx={{ 

@@ -1,4 +1,4 @@
-import { Box, Paper, Typography } from '@mui/material'
+import { Box, Paper, Typography, CircularProgress } from '@mui/material'
 
 function LoadingMessage({ reasoningContent, reasoningTime }) {
   return (
@@ -14,8 +14,35 @@ function LoadingMessage({ reasoningContent, reasoningTime }) {
       }}
     >
       <Box>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+          <CircularProgress size={20} thickness={4} sx={{ color: '#8B4513' }} />
+          <Typography 
+            sx={{ 
+              fontSize: '0.9rem',
+              color: 'text.secondary',
+              fontWeight: 500
+            }}
+          >
+            正在思考中...
+          </Typography>
+        </Box>
         {reasoningContent && (
-          <Box sx={{ mb: 2 }}>
+          <Box 
+            sx={{ 
+              mb: 2,
+              animation: 'fadeIn 0.3s ease-out',
+              '@keyframes fadeIn': {
+                from: {
+                  opacity: 0,
+                  transform: 'translateY(5px)'
+                },
+                to: {
+                  opacity: 1,
+                  transform: 'translateY(0)'
+                }
+              }
+            }}
+          >
             <Typography 
               sx={{ 
                 lineHeight: 1.8, 

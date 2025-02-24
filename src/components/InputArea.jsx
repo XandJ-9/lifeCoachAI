@@ -17,7 +17,7 @@ function InputArea({ input, setInput, handleSend, loading }) {
       <TextField
         fullWidth
         variant="outlined"
-        placeholder="请说出您的疑惑，让我为您推演解答"
+        placeholder="有什么我可以帮您的吗？让我为您提供生活建议"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyPress={(e) => e.key === 'Enter' && handleSend()}

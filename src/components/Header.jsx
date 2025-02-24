@@ -5,7 +5,7 @@ function Header() {
     <AppBar 
       position="static" 
       sx={{ 
-        bgcolor: '#1a237e',
+        bgcolor: '#2B5F75',
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)'
       }}
     >
@@ -21,10 +21,10 @@ function Header() {
             letterSpacing: '1px',
             cursor: 'default',
             textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)',
-            fontFamily: '"KaiTi", "楷体", serif'
+            fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
           }}
         >
-          中国传统风水命理研究派
+          AI Life Coach
         </Typography>
       </Toolbar>
     </AppBar>
